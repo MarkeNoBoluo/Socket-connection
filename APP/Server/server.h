@@ -21,7 +21,6 @@ public:
 private slots:
     void on_pushButton_listen_clicked();//TCP侦听
 
-
     void server_new_connect(); //创建新连接
 
     void socket_read_data();//TCP读取缓冲区数据
@@ -29,7 +28,6 @@ private slots:
     void read_data();//UDP读取缓冲区数据
 
     void on_comboBox_currentIndexChanged();//界面转换
-
 
 private:
     Ui::Server *ui;

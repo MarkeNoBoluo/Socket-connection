@@ -14,9 +14,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class App; }
 QT_END_NAMESPACE
 
-//客户端
-
-
+/*客户端*/
 class App : public QMainWindow
 {
     Q_OBJECT
@@ -24,6 +22,9 @@ class App : public QMainWindow
 public:
     App(QWidget *parent = nullptr);
     ~App();
+
+public slots:
+    void onTimeOut();//计时器
 
 private slots:
 
@@ -40,6 +41,6 @@ private:
     Ui::App *ui;
     QTcpSocket *mSocket;//TCP套接字对象
     QUdpSocket *uSocket;//UDP套接字对象
-
+    QTimer *tim;//定时器对象
 };
 #endif // APP_H

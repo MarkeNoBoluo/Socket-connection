@@ -6,192 +6,193 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>594</width>
-    <height>376</height>
+    <width>450</width>
+    <height>460</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>App</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton{
+ color:black
+}
+QPushButton:hover{
+ color:yellow
+}
+QPushButton:pressed{
+ color:red
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid darkgray;
+    selection-background-color: red;
+}
+QComboBox:editable {
+    background: blue;
+}
+</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_send">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>130</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>发送</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButtonconnect">
-    <property name="geometry">
-     <rect>
-      <x>390</x>
-      <y>50</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>连接</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox_auto">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>180</y>
-      <width>71</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>自动</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_state">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>60</y>
-      <width>141</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>60</y>
-      <width>54</width>
-      <height>12</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>连接状态：</string>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>90</y>
-      <width>111</width>
-      <height>22</height>
-     </rect>
-    </property>
+   <layout class="QVBoxLayout" name="verticalLayout_6">
     <item>
-     <property name="text">
-      <string>DataA</string>
-     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>端口：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="portEdit"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>IP地址：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ipEdit"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </item>
     <item>
-     <property name="text">
-      <string>DataB</string>
-     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButtonconnect">
+          <property name="styleSheet">
+           <string notr="true">pushButtonconnect {color: red}</string>
+          </property>
+          <property name="text">
+           <string>连接</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </item>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>90</y>
-      <width>54</width>
-      <height>12</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>输入数据：</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="textEdit_enter">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>120</y>
-      <width>271</width>
-      <height>71</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radioButton_TCP">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>60</y>
-      <width>89</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TCP</string>
-    </property>
-   </widget>
-   <widget class="QRadioButton" name="radioButton_UDP">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>80</y>
-      <width>89</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>UDP</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>20</y>
-      <width>374</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLabel" name="label_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QPushButton" name="pushButton_send">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>发送</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_auto">
+        <property name="text">
+         <string>自动</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_TCP">
+        <property name="text">
+         <string>TCP</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioButton_UDP">
+        <property name="text">
+         <string>UDP</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>连接状态：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_state">
+        <property name="styleSheet">
+         <string notr="true">QLineEdit{color:red}</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QProgressBar" name="progressBar">
+      <property name="maximum">
+       <number>5</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="invertedAppearance">
+       <bool>false</bool>
+      </property>
+      <property name="format">
+       <string>%p%</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>输入数据：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <item>
          <property name="text">
-          <string>IP地址：</string>
+          <string>DataA</string>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="ipEdit"/>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QLabel" name="label_4">
+        </item>
+        <item>
          <property name="text">
-          <string>端口：</string>
+          <string>DataB</string>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="portEdit"/>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="textEdit_enter"/>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>594</width>
+     <width>450</width>
      <height>23</height>
     </rect>
    </property>
